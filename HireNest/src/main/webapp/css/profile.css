@@ -1,0 +1,100 @@
+/* ============================================
+   PROFILE.CSS - HireNest Student Profile
+   ============================================ */
+
+/* ----- FORM ELEMENTS ----- */
+.form-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.form-label .req {
+    color: #ef4444;
+}
+
+.form-control {
+    width: 100%;
+    padding: 11px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
+    background: #fafbfc;
+    color: #1e293b;
+}
+
+.form-control:focus {
+    border-color: #4f46e5;
+    outline: none;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 60px;
+}
+
+/* ----- PROFILE COMPLETION BADGE ----- */
+.profile-completion-badge {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+/* ----- PROFILE PHOTO ----- */
+.profile-photo-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 3px solid #e2e8f0;
+    display: block;
+}
+
+.profile-photo-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4f46e5;
+    font-size: 48px;
+    border: 3px solid #e2e8f0;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 768px) {
+    .profile-completion-badge {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .profile-photo-preview,
+    .profile-photo-placeholder {
+        width: 90px;
+        height: 90px;
+        font-size: 36px;
+    }
+
+    .d-flex.gap-2 {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,10 @@
+target/ 
+.idea/ 
+.smarttomcat/ 
+*.iml 
+.DS_Store 
+*.log 
+.mvn/ 
+config.properties
+google-client-secret.json
+application.properties

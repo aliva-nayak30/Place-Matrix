@@ -1,0 +1,437 @@
+/* ============================================
+   REGISTER.CSS - HireNest Registration Styles
+   ============================================ */
+
+/* ----- RESET & BASE ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* ----- MAIN CONTAINER ----- */
+.register-wrapper {
+    width: 100%;
+    max-width: 520px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----- CARD ----- */
+.register-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 35px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* ----- HEADER ----- */
+.register-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.register-header .logo-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-size: 28px;
+    color: white;
+}
+
+.register-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.register-header h1 span {
+    color: #4f46e5;
+}
+
+.register-header p {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+/* ----- ROLE SELECTOR ----- */
+.role-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.role-btn {
+    padding: 10px 6px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    background: white;
+    color: #64748b;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.role-btn i {
+    font-size: 18px;
+}
+
+.role-btn:hover {
+    border-color: #4f46e5;
+    color: #4f46e5;
+    background: #f8f9ff;
+}
+
+.role-btn.active {
+    border-color: #4f46e5;
+    background: #eef2ff;
+    color: #4f46e5;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+}
+
+/* ----- ALERT MESSAGES ----- */
+.alert {
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+}
+
+.alert-danger {
+    background: #fef2f2;
+    color: #991b1b;
+    border-left: 4px solid #dc2626;
+}
+
+.alert-success {
+    background: #f0fdf4;
+    color: #166534;
+    border-left: 4px solid #22c55e;
+}
+
+/* ----- FORM ----- */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.form-group label i {
+    color: #4f46e5;
+    margin-right: 8px;
+    width: 18px;
+}
+
+.required {
+    color: #ef4444;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s;
+    background: #f8f9fa;
+    color: #1e293b;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4f46e5;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+    background: white;
+}
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+.form-group input.error,
+.form-group select.error {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+
+.form-group input.error:focus,
+.form-group select.error:focus {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+    font-weight: 500;
+}
+
+.help-text {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 4px;
+    display: block;
+}
+
+/* ----- SELECT DROPDOWN ----- */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23636e72' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+select option {
+    padding: 10px;
+}
+
+/* ----- PASSWORD WRAPPER ----- */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    padding-right: 50px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #94a3b8;
+    font-size: 18px;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+.toggle-password:hover {
+    color: #4f46e5;
+}
+
+.toggle-password:focus {
+    outline: none;
+}
+
+/* ----- INFO BOX ----- */
+.info-box {
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin: 10px 0 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #92400e;
+}
+
+.info-box i {
+    font-size: 18px;
+    color: #f59e0b;
+}
+
+#studentInfoBox {
+    background: #eff6ff;
+    border-color: #93c5fd;
+    color: #1e40af;
+}
+
+#studentInfoBox i {
+    color: #3b82f6;
+}
+
+/* ----- SUBMIT BUTTON ----- */
+.btn-register {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+}
+
+.btn-register:active {
+    transform: translateY(0);
+}
+
+/* ----- FOOTER ----- */
+.register-footer {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #f1f5f9;
+}
+
+.register-footer p {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0;
+}
+
+.register-footer a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.register-footer a:hover {
+    color: #4338ca;
+    text-decoration: underline;
+}
+
+/* ----- RESPONSIVE DESIGN ----- */
+@media screen and (max-width: 480px) {
+    .register-card {
+        padding: 25px 18px;
+        border-radius: 15px;
+    }
+
+    .register-header h1 {
+        font-size: 24px;
+    }
+
+    .register-header .logo-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .role-selector {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+
+    .role-btn {
+        font-size: 10px;
+        padding: 8px 4px;
+    }
+
+    .role-btn i {
+        font-size: 16px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .btn-register {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .register-card {
+        padding: 20px 14px;
+    }
+
+    .role-btn span {
+        display: none;
+    }
+
+    .role-btn i {
+        font-size: 18px;
+    }
+}
+
+/* ----- SCROLLBAR ----- */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4f46e5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4338ca;
+}

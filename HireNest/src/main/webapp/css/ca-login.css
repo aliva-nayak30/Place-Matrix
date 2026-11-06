@@ -1,0 +1,73 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f766e 0%, #0d9488 50%, #14b8a6 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.ca-login-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 45px 40px;
+    max-width: 430px;
+    width: 100%;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+}
+
+.ca-login-header { text-align: center; margin-bottom: 32px; }
+
+.ca-icon-circle {
+    width: 75px; height: 75px;
+    background: linear-gradient(135deg, #0d9488, #14b8a6);
+    border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 18px; color: #fff; font-size: 34px;
+    box-shadow: 0 10px 30px rgba(13,148,136,0.4);
+    transform: rotate(-5deg);
+}
+
+.ca-login-header h1 {
+    font-size: 28px; font-weight: 800; color: #134e4a; margin: 0;
+}
+
+.ca-login-header p { color: #64748b; font-size: 14px; margin-top: 6px; }
+
+.form-label { font-weight: 600; font-size: 13px; color: #134e4a; }
+.form-control {
+    padding: 13px 16px; border: 2px solid #e2e8f0; border-radius: 12px;
+    font-size: 14px; font-family: 'Inter', sans-serif;
+}
+.form-control:focus { border-color: #0d9488; box-shadow: 0 0 0 4px rgba(13,148,136,0.15); }
+
+.input-group-text {
+    background: #f0fdfa; border: 2px solid #e2e8f0;
+    border-right: none; border-radius: 12px 0 0 12px; color: #0d9488;
+}
+.form-control.with-icon { border-left: none; border-radius: 0 12px 12px 0; }
+
+.btn-ca-login {
+    width: 100%; padding: 14px;
+    background: linear-gradient(135deg, #0d9488, #059669);
+    color: #fff; border: none; border-radius: 12px;
+    font-weight: 700; font-size: 15px; cursor: pointer;
+    transition: all 0.25s; font-family: 'Inter', sans-serif;
+}
+.btn-ca-login:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(13,148,136,0.4); color: #fff; }
+
+.alert-danger {
+    background: #fef2f2; color: #991b1b;
+    border-left: 4px solid #dc2626; border-radius: 12px;
+    font-size: 13px; padding: 12px 16px;
+    display: flex; align-items: center; gap: 8px;
+    border-top: none; border-right: none; border-bottom: none;
+}
+
+.ca-demo {
+    background: #f0fdfa; border: 1px solid #99f6e4;
+    border-radius: 12px; padding: 12px 15px;
+    margin-top: 22px; font-size: 12px; color: #115e59;
+    text-align: center;
+}

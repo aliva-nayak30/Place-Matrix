@@ -1,0 +1,200 @@
+/* ============================================
+   MY-APPLICATIONS.CSS
+   ============================================ */
+
+/* ----- Filter Tabs ----- */
+.filter-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filter-tab {
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.filter-tab:hover {
+    border-color: #4f46e5;
+    color: #4f46e5;
+    text-decoration: none;
+}
+
+.filter-tab.active {
+    background: #4f46e5;
+    color: #ffffff;
+    border-color: #4f46e5;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.tab-count {
+    background: rgba(255, 255, 255, 0.25);
+    color: inherit;
+    padding: 1px 7px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.filter-tab:not(.active) .tab-count {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+/* ----- Company Cell ----- */
+.company-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.company-logo-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+}
+
+.company-name {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 14px;
+}
+
+.company-role {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 2px;
+}
+
+/* ----- Status Badges ----- */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.status-applied     { background: #dbeafe; color: #1e40af; }
+.status-shortlisted { background: #d1fae5; color: #065f46; }
+.status-interview   { background: #fef3c7; color: #b45309; }
+.status-rejected    { background: #fee2e2; color: #991b1b; }
+.status-hired       { background: #bbf7d0; color: #14532d; }
+.status-withdrawn   { background: #f1f5f9; color: #64748b; }
+
+/* ----- Buttons ----- */
+.btn-view {
+    padding: 6px 14px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    color: #4f46e5;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-view:hover {
+    background: #4f46e5;
+    color: #ffffff;
+}
+
+.btn-withdraw {
+    padding: 6px 10px;
+    margin-left: 6px;
+    border-radius: 8px;
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-withdraw:hover {
+    background: #dc2626;
+    color: #ffffff;
+}
+
+/* ----- Timeline ----- */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid #e2e8f0;
+    margin-left: 8px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -39px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 2px #e2e8f0;
+}
+
+.timeline-content {
+    padding-left: 8px;
+}
+
+.timeline-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.timeline-date {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+    .filter-tab {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    .tab-count {
+        font-size: 10px;
+    }
+}
